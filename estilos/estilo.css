@@ -1,0 +1,255 @@
+:root {
+    --cor-principal: #e3b6a0;
+    --cor-secundaria: #a86b4c;
+    --cor-fundo: #fdf6f0;
+    --cor-texto: #333;
+    --cor-branco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+header {
+    background: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(180, 120, 90, 0.08);
+}
+
+header h1 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+}
+
+nav {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover, .btn-agende {
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+#banner {
+    background: var(--cor-branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 0 0;
+}
+
+.banner-texto {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.banner-texto h2 {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.banner-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+}
+
+.btn-banner {
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-banner:hover {
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+.banner-img img {
+    width: 320px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(180, 120, 90, 0.12);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--cor-secundaria);
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.procedimentos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.procedimento {
+    background: var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(180, 120, 90, 0.08);
+    width: 260px;
+    padding: 18px;
+    text-align: center;
+}
+
+.procedimento img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.procedimento h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.galeria {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(180, 120, 90, 0.10);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.galeria img:hover {
+    transform: scale(1.07);
+}
+
+.depoimentos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+blockquote {
+    background: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 18px 22px;
+    border-radius: 10px;
+    max-width: 500px;
+    font-style: italic;
+    box-shadow: 0 2px 10px rgba(180, 120, 90, 0.07);
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--cor-branco);
+    opacity: 0.8;
+}
+
+.agendamento-links {
+    display: flex;
+    gap: 18px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.btn-agenda {
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-agenda:hover {
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+footer {
+    background: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 12px 12px;
+}
+
+@media (max-width: 900px) {
+    .procedimentos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+    #banner .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner-texto {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 18px 6px;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .banner-img img {
+        width: 95vw;
+        max-width: 320px;
+    }
+}
